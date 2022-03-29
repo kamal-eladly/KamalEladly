@@ -1,0 +1,762 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$color:#0075f6;
+
+$color2:#0075f66b;
+
+
+/*---------------------start of nav----------------------*/
+
+nav{
+    span.icon{
+        position: fixed;
+        right: 15;
+        top: 15;
+        font-size: 40px;
+        color: $color;
+        cursor: pointer;
+        display: none;
+    }
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1111111111111;
+    
+    .contaner{
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        padding: 10px 0px;
+        
+        .logo{
+            width: 10%;
+            float: left;
+            font-size: 25px;
+            color:$color;
+            font-weight: bold;   
+            margin-top: 5px;
+            span{
+                cursor: pointer;
+            }
+        }
+        
+        .list{
+            width: 90%;
+            float: left;
+            
+            ul{
+                float: right;
+                li{
+                    float: left;
+                    margin-left: 10px;
+                    padding: 10px;
+                    list-style: none;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    font-size: 18px;
+                    position: relative;
+                    
+                    
+                    &:hover{
+                        color: $color;
+                        
+                    }
+                    
+                }
+                
+                li::before{
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    left: 50%;
+                     bottom: 3;
+                     height: 3;
+                    background-color: $color;
+                     transition: .2s ease-in-out;
+                        }
+                
+                li:hover::before{
+                    content: '';
+                    width: 70%;
+                    left: 10;
+                        
+                }
+                
+                
+                
+                
+                
+                
+            }
+            
+        }
+        
+    
+    }
+    
+    
+    
+}
+
+
+@media(max-width:992px){
+    nav{
+        
+        span.icon{
+            display: block;
+        }
+        .contaner{
+            
+            .logo{
+                margin-left: 20px;
+                font-size: 35px;
+            }
+            
+            width: 100%;
+            float: none;
+            .list{
+                width: 100%;
+                float: none;
+                ul{
+                   display: none;
+                    background-color: rgba(255,255,255,.8);
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                     margin-top: 60px;
+                    padding: 50px 0px;
+                    float: none;   
+                    height: 100vh;
+                    li{
+                        display: block;
+                        margin-bottom: 20px;
+                        
+                        text-align: center;
+                        float: none;
+                    }
+                    li:hover::before {
+                      content: '';
+                      width: 100%;
+                      left: 0; 
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*---------------------end of nav----------------------*/
+
+
+/*---------------------start of header----------------------*/
+
+header{
+    height: 650px;
+   background-image: linear-gradient(to right, white 50%, $color2 50%);
+    
+    .contaner{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        padding-top: 90px;
+        
+        .row{
+            .text{
+                position: absolute;
+                left: 60;
+                top: 150;
+                z-index: 1111;
+                p,h1{
+                    color: black;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+                h1{
+                    span{
+                        color: $color;
+                    }
+                    font-size: 40px;
+                }
+                p:first-of-type{
+                    color: $color;
+                }
+                
+                p:last-of-type{
+                    letter-spacing: 5px;    
+                    
+                }
+                
+                button{
+                    text-transform: capitalize;
+                    background: none;
+                    border: 1px solid $color;
+                    padding: 5px 30px;
+                    color: $color;
+                }
+                
+            }
+            
+            .img{
+                
+                float: right;
+                height: 500px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    
+                    
+                }
+            }
+            
+        }
+    }
+    
+    
+}
+
+
+@media(max-width:992px){
+    header{
+        
+        .contaner{
+            .row{
+                .text{
+                    text-align: center;
+                    width: 80%;
+                    margin: auto;
+                    color: white;
+                    
+                    
+                    button{
+                        color: white;
+                        border: 1px solid white;
+                    }
+                    h1{
+                        font-size: 20px;
+                        color: white;
+                        span{
+                            color:white;
+                        }
+                    }
+                    p{
+                        color: white;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------end of header----------------------*/
+/*---------------------start of about----------------------*/
+
+.about{
+    width: 100%;
+    margin: 50px 0px;
+    .row{
+        >h1{
+            text-align: center;
+            color: $color;
+            text-transform: capitalize;
+            margin-bottom: 50px;    
+        }
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        .photo{
+            float: left;
+            height: 400px;
+            img{
+                width:90%;
+                height: 400px;
+                margin-left: 0px;
+            }
+            
+        }
+        
+        .text{
+            float: left;
+            h2{
+                text-transform: capitalize;
+                span{
+                    color: $color;
+                }
+            }
+            p:first-of-type{
+                text-align: center;
+            }
+            p{
+                word-spacing: 1px;
+                text-transform: capitalize;
+                span{
+                    color: $color;
+                    text-align: left;
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+}
+
+
+@media(max-width:992px){
+    .about{
+        .row{
+            .photo{
+                img{
+                    margin-left: 0px;
+                    width: 100%;
+                    
+                }
+            }
+            .text{
+                p:first-of-type{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------end of about----------------------*/
+
+/*---------------------start of skills----------------------*/
+
+
+.skills{
+    width: 100%;
+    margin: 50px 0px;
+    
+    .row{
+        width: 80%;
+        margin: auto;
+        >h1{
+            text-align: center;
+            color: $color;
+        }
+        
+        .skill{
+            li{
+                list-style: none;
+                margin-bottom: 20px;
+                p{
+                    display: inline-block;
+                    color: $color;
+                    font-size: 25px;
+                }
+                
+                span:first-of-type{
+                    text-transform: capitalize;
+                    color: $color;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                    font-size: 25px;
+                }
+                
+                >span:last-of-type{
+                    background-color: #ddd;
+                    display: inline-block;
+                    height: 25px;
+                    border-radius: 20px;
+                    width: 100%;
+                    span{
+                        height:25px;
+                        background-color: $color;
+                        border-radius: 20px;
+                    
+                        
+                    }
+                      
+                }
+                
+                span.html{
+                    span{
+                        width: 100%;
+                        animation: html 2s;
+                    }
+                    
+                }
+                
+                
+                span.css{
+                    span{
+                        width: 90%;
+                        animation: css 2s;
+                    }
+                    
+                }
+                
+                span.js{
+                    span{
+                        width: 50%;
+                        animation: js 2s;
+                    }
+                    
+                }
+                
+                span.jq{
+                    span{
+                        width: 70%;
+                        animation: jq 2s;
+                    }
+                    
+                }
+                
+                span.boot{
+                    span{
+                        width: 60%;
+                        animation: boot 2s;
+                    }
+                    
+                }
+                
+                span.scss{
+                    span{
+                        width: 90%;
+                        animation: scss 2s;
+                    }
+                    
+                }
+                
+                span.xd{
+                    span{
+                        width: 70%;
+                        animation: xd 2s;
+                    }
+                    
+                }
+                
+                
+                p.h{
+                  margin-left: 94%;
+                }
+                
+                p.c{
+                  margin-left: 81%;
+                }
+                
+                p.j{
+                  margin-left: 34%;
+                }
+                
+                p.q{
+                  margin-left: 58%;
+                }
+                
+                p.b{
+                  margin-left: 45%;
+                }
+                
+                p.s{
+                  margin-left: 81%;
+                }
+                
+                p.x{
+                  margin-left: 61%;
+                }
+                
+                
+            }
+            
+            
+            
+            
+        }
+        
+    }
+    
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 100%;
+    }
+    
+    
+}
+
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 90%;
+    }
+    
+    
+}
+
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 50%;
+    }
+    
+    
+}
+
+@keyframes jq{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 70%;
+    }
+    
+    
+}
+
+@keyframes boot{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 60%;
+    }
+    
+    
+}
+
+
+@keyframes scss{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 90%;
+    }
+    
+    
+}
+
+@keyframes xd{
+    0%{
+        width: 0%;
+    }
+    
+   
+    100%{
+        width: 70%;
+    }
+    
+    
+}
+
+
+@media(max-width:992px){
+    
+    .skills{
+        .row{
+            .skill{
+                li{
+                 p.h{
+                  margin-left: 89%;
+                }
+                
+                p.c{
+                  margin-left: 81%;
+                }
+                
+                p.j{
+                  margin-left: 13%;
+                }
+                
+                p.q{
+                  margin-left: 43%;
+                }
+                
+                p.b{
+                  margin-left: 25%;
+                }
+                
+                p.s{
+                  margin-left: 81%;
+                }
+                
+                p.x{
+                  margin-left: 55%;
+                }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+/*---------------------end of skills----------------------*/
+
+/*---------------------start of projects----------------------*/
+
+.projects{
+    margin: 50px 0px;
+    .row{
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        >h1{
+            text-align: center;
+            color: $color;
+            margin-bottom: 50px;
+        }
+        .box{
+            cursor: pointer;
+            position: relative;
+            img{
+                width: 98%;
+                margin-right: 10px;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+            .text{
+                display: none;
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                width: 98%;
+                height: 300px;
+                background-color: $color2;
+                color: white;
+                h4{
+                    text-align: center;
+                    margin-top: 100px;
+                   
+                }
+                p{
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+    
+}
+
+
+@media(min-width:768px)and(max-width:1200px){
+    .projects{
+        .row{
+            .last{
+                display: none;
+               
+            }
+        }
+    }
+}
+
+
+/*---------------------end of projects----------------------*/
+
+
+/*---------------------start of contact----------------------*/
+
+
+.contact{
+    margin: 50px 0px;
+    .row{
+        overflow: hidden;
+        width: 80%;
+        margin: auto;
+        >h1{
+            color: $color;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .form-group{
+            >div{
+                margin-bottom: 15px;
+            }
+            div.Message{
+                textarea{
+                    height: 150px;
+                }
+            }
+            div.send{
+                input{
+                    display: block;
+                    width: 100%;
+                    
+                }
+            }
+            
+        }
+        
+    }
+}
+
+
+
+
+/*---------------------end of contact----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+/*---------------------start of nav----------------------*/
+nav {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1111111111111; }
+  nav span.icon {
+    position: fixed;
+    right: 15;
+    top: 15;
+    font-size: 40px;
+    color: #0075f6;
+    cursor: pointer;
+    display: none; }
+  nav .contaner {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 0px; }
+    nav .contaner .logo {
+      width: 10%;
+      float: left;
+      font-size: 25px;
+      color: #0075f6;
+      font-weight: bold;
+      margin-top: 5px; }
+      nav .contaner .logo span {
+        cursor: pointer; }
+    nav .contaner .list {
+      width: 90%;
+      float: left; }
+      nav .contaner .list ul {
+        float: right; }
+        nav .contaner .list ul li {
+          float: left;
+          margin-left: 10px;
+          padding: 10px;
+          list-style: none;
+          text-transform: capitalize;
+          cursor: pointer;
+          font-size: 18px;
+          position: relative; }
+          nav .contaner .list ul li:hover {
+            color: #0075f6; }
+        nav .contaner .list ul li::before {
+          content: '';
+          position: absolute;
+          width: 0%;
+          left: 50%;
+          bottom: 3;
+          height: 3;
+          background-color: #0075f6;
+          transition: .2s ease-in-out; }
+        nav .contaner .list ul li:hover::before {
+          content: '';
+          width: 70%;
+          left: 10; }
+
+@media (max-width: 992px) {
+  nav span.icon {
+    display: block; }
+  nav .contaner {
+    width: 100%;
+    float: none; }
+    nav .contaner .logo {
+      margin-left: 20px;
+      font-size: 35px; }
+    nav .contaner .list {
+      width: 100%;
+      float: none; }
+      nav .contaner .list ul {
+        display: none;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: 60px;
+        padding: 50px 0px;
+        float: none;
+        height: 100vh; }
+        nav .contaner .list ul li {
+          display: block;
+          margin-bottom: 20px;
+          text-align: center;
+          float: none; }
+        nav .contaner .list ul li:hover::before {
+          content: '';
+          width: 100%;
+          left: 0; } }
+/*---------------------end of nav----------------------*/
+/*---------------------start of header----------------------*/
+header {
+  height: 650px;
+  background-image: linear-gradient(to right, white 50%, #0075f66b 50%); }
+  header .contaner {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding-top: 90px; }
+    header .contaner .row .text {
+      position: absolute;
+      left: 60;
+      top: 150;
+      z-index: 1111; }
+      header .contaner .row .text p, header .contaner .row .text h1 {
+        color: black;
+        font-weight: bold;
+        text-transform: capitalize; }
+      header .contaner .row .text h1 {
+        font-size: 40px; }
+        header .contaner .row .text h1 span {
+          color: #0075f6; }
+      header .contaner .row .text p:first-of-type {
+        color: #0075f6; }
+      header .contaner .row .text p:last-of-type {
+        letter-spacing: 5px; }
+      header .contaner .row .text button {
+        text-transform: capitalize;
+        background: none;
+        border: 1px solid #0075f6;
+        padding: 5px 30px;
+        color: #0075f6; }
+    header .contaner .row .img {
+      float: right;
+      height: 500px; }
+      header .contaner .row .img img {
+        width: 100%;
+        height: 100%; }
+
+@media (max-width: 992px) {
+  header .contaner .row .text {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: white; }
+    header .contaner .row .text button {
+      color: white;
+      border: 1px solid white; }
+    header .contaner .row .text h1 {
+      font-size: 20px;
+      color: white; }
+      header .contaner .row .text h1 span {
+        color: white; }
+    header .contaner .row .text p {
+      color: white; } }
+/*---------------------end of header----------------------*/
+/*---------------------start of about----------------------*/
+.about {
+  width: 100%;
+  margin: 50px 0px; }
+  .about .row {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; }
+    .about .row > h1 {
+      text-align: center;
+      color: #0075f6;
+      text-transform: capitalize;
+      margin-bottom: 50px; }
+    .about .row .photo {
+      float: left;
+      height: 400px; }
+      .about .row .photo img {
+        width: 90%;
+        height: 400px;
+        margin-left: 0px; }
+    .about .row .text {
+      float: left; }
+      .about .row .text h2 {
+        text-transform: capitalize; }
+        .about .row .text h2 span {
+          color: #0075f6; }
+      .about .row .text p:first-of-type {
+        text-align: center; }
+      .about .row .text p {
+        word-spacing: 1px;
+        text-transform: capitalize; }
+        .about .row .text p span {
+          color: #0075f6;
+          text-align: left; }
+
+@media (max-width: 992px) {
+  .about .row .photo img {
+    margin-left: 0px;
+    width: 100%; }
+  .about .row .text p:first-of-type {
+    text-align: left; } }
+/*---------------------end of about----------------------*/
+/*---------------------start of skills----------------------*/
+.skills {
+  width: 100%;
+  margin: 50px 0px; }
+  .skills .row {
+    width: 80%;
+    margin: auto; }
+    .skills .row > h1 {
+      text-align: center;
+      color: #0075f6; }
+    .skills .row .skill li {
+      list-style: none;
+      margin-bottom: 20px; }
+      .skills .row .skill li p {
+        display: inline-block;
+        color: #0075f6;
+        font-size: 25px; }
+      .skills .row .skill li span:first-of-type {
+        text-transform: capitalize;
+        color: #0075f6;
+        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 25px; }
+      .skills .row .skill li > span:last-of-type {
+        background-color: #ddd;
+        display: inline-block;
+        height: 25px;
+        border-radius: 20px;
+        width: 100%; }
+        .skills .row .skill li > span:last-of-type span {
+          height: 25px;
+          background-color: #0075f6;
+          border-radius: 20px; }
+      .skills .row .skill li span.html span {
+        width: 100%;
+        animation: html 2s; }
+      .skills .row .skill li span.css span {
+        width: 90%;
+        animation: css 2s; }
+      .skills .row .skill li span.js span {
+        width: 50%;
+        animation: js 2s; }
+      .skills .row .skill li span.jq span {
+        width: 70%;
+        animation: jq 2s; }
+      .skills .row .skill li span.boot span {
+        width: 60%;
+        animation: boot 2s; }
+      .skills .row .skill li span.scss span {
+        width: 90%;
+        animation: scss 2s; }
+      .skills .row .skill li span.xd span {
+        width: 70%;
+        animation: xd 2s; }
+      .skills .row .skill li p.h {
+        margin-left: 94%; }
+      .skills .row .skill li p.c {
+        margin-left: 81%; }
+      .skills .row .skill li p.j {
+        margin-left: 34%; }
+      .skills .row .skill li p.q {
+        margin-left: 58%; }
+      .skills .row .skill li p.b {
+        margin-left: 45%; }
+      .skills .row .skill li p.s {
+        margin-left: 81%; }
+      .skills .row .skill li p.x {
+        margin-left: 61%; }
+
+@keyframes html {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+@keyframes css {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+@keyframes js {
+  0% {
+    width: 0%; }
+  100% {
+    width: 50%; } }
+@keyframes jq {
+  0% {
+    width: 0%; }
+  100% {
+    width: 70%; } }
+@keyframes boot {
+  0% {
+    width: 0%; }
+  100% {
+    width: 60%; } }
+@keyframes scss {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+@keyframes xd {
+  0% {
+    width: 0%; }
+  100% {
+    width: 70%; } }
+@media (max-width: 992px) {
+  .skills .row .skill li p.h {
+    margin-left: 89%; }
+  .skills .row .skill li p.c {
+    margin-left: 81%; }
+  .skills .row .skill li p.j {
+    margin-left: 13%; }
+  .skills .row .skill li p.q {
+    margin-left: 43%; }
+  .skills .row .skill li p.b {
+    margin-left: 25%; }
+  .skills .row .skill li p.s {
+    margin-left: 81%; }
+  .skills .row .skill li p.x {
+    margin-left: 55%; } }
+/*---------------------end of skills----------------------*/
+/*---------------------start of projects----------------------*/
+.projects {
+  margin: 50px 0px; }
+  .projects .row {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; }
+    .projects .row > h1 {
+      text-align: center;
+      color: #0075f6;
+      margin-bottom: 50px; }
+    .projects .row .box {
+      cursor: pointer;
+      position: relative; }
+      .projects .row .box img {
+        width: 98%;
+        margin-right: 10px;
+        height: 300px;
+        margin-bottom: 20px; }
+      .projects .row .box .text {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        width: 98%;
+        height: 300px;
+        background-color: #0075f66b;
+        color: white; }
+        .projects .row .box .text h4 {
+          text-align: center;
+          margin-top: 100px; }
+        .projects .row .box .text p {
+          text-align: center; }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .projects .row .last {
+    display: none; } }
+/*---------------------end of projects----------------------*/
+/*---------------------start of contact----------------------*/
+.contact {
+  margin: 50px 0px; }
+  .contact .row {
+    overflow: hidden;
+    width: 80%;
+    margin: auto; }
+    .contact .row > h1 {
+      color: #0075f6;
+      margin-bottom: 50px;
+      text-align: center; }
+    .contact .row .form-group > div {
+      margin-bottom: 15px; }
+    .contact .row .form-group div.Message textarea {
+      height: 150px; }
+    .contact .row .form-group div.send input {
+      display: block;
+      width: 100%; }
+
+/*---------------------end of contact----------------------*/
+
+/*# sourceMappingURL=style.css.map */
